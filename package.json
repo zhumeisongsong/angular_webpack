@@ -1,11 +1,11 @@
 {
-  "name": "angular",
+  "name": "angular-webpack",
   "version": "1.0.0",
   "description": "A webpack starter for Angular",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --inline --progress --host=localhost --port 4200",
     "test": "karma start",
-    "build": "webpack"
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
   "license": "MIT",
   "dependencies": {
